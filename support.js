@@ -22,6 +22,8 @@ let camera_offset;
 let camera_velocity;
 
 let mySound;
+let play;
+let stop;
 
 /////////////////////////////
 // Transforms between coordinate systems
@@ -91,22 +93,35 @@ function setup() {
     mySound.play();
 }
 
-function keyReleased()
-{
-  if (key=='1')
-  {
-  	mySound.pause();
-  }
-  if (key=='2')
-  {
-	mySound.play();
-  }
-}
+
 // mouseClicked is one of the callback handler functions in p5.js. We
 // redefine it here to do what we want it to do.
 function mouseClicked() {
     let world_pos = screenToWorld([0 - mouseX, mouseY], [camera_offset.x, camera_offset.y]);
     myHandleClick(world_pos[0], world_pos[1]);
+}
+
+mySound.loop();
+mySound.stop();
+
+play = createButton('Play Sound');
+play.position(25,25);
+playbutton.mousePressed(playsound);
+
+stop = createButton('Stop Sound');
+stop.position(75, 25);
+stop.mousePressed(stopsound);
+
+function playsound {
+    if(mySound.isPlaying() == false) {
+    mySound.play();
+    }
+}
+
+function stopsound {
+    if(mySound.isPlaying() == true) {
+    mySound.pause();
+    }
 }
 
 // And now for the core loop...
