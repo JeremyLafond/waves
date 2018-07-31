@@ -103,6 +103,7 @@ function mouseClicked() {
 
 function keyReleased() {
     if(key=='1') {
+        console.log("hi");
         if(mySound.isPlaying() == false) {
             mySound.play();
         }
