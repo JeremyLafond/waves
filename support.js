@@ -89,8 +89,18 @@ function setup() {
     tile_columns = Math.ceil( width / (tile_width_step * 2)) + 1;
     tile_rows = Math.ceil( height / (tile_height_step * 2)) + 3; // The +3 is to keep drawing rows after the screen because tall tiles may protrude into the screen area
 
+    
+    mySound.loop();
+    mySound.stop();
+
+    play = createButton('Play Sound');
+    play.position(25,25);
+    playbutton.mousePressed(playsound);
+
+    stop = createButton('Stop Sound');
+    stop.position(75, 25);
+    stop.mousePressed(stopsound);
     mySetup();
-    mySound.play();
 }
 
 
@@ -104,17 +114,6 @@ function mouseClicked() {
 function mousePressed() {
     mySound.play();
 }
-
-mySound.loop();
-mySound.stop();
-
-play = createButton('Play Sound');
-play.position(25,25);
-playbutton.mousePressed(playsound);
-
-stop = createButton('Stop Sound');
-stop.position(75, 25);
-stop.mousePressed(stopsound);
 
 function playsound() {
     if(mySound.isPlaying() == false) {
