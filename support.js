@@ -105,7 +105,8 @@ function keyReleased() {
         if(mySound.isPlaying() == false) {
             mySound.loop();
         }
-
+    }
+    if(key=='2') {
         if(mySound.isPlaying() == true) {
             mySound.pause();
         }
