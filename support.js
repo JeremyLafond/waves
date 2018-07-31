@@ -114,13 +114,13 @@ stop.mousePressed(stopsound);
 
 function playsound {
     if(mySound.isPlaying() == false) {
-    mySound.play();
+        mySound.play();
     }
 }
 
 function stopsound {
     if(mySound.isPlaying() == true) {
-    mySound.pause();
+        mySound.pause();
     }
 }
 
