@@ -94,11 +94,11 @@ function setup() {
     mySound.stop();
 
     play = createButton('Play Sound');
-    play.position(25,25);
-    playbutton.mousePressed(playsound);
+    play.position(0,0);
+    play.mousePressed(playsound);
 
     stop = createButton('Stop Sound');
-    stop.position(75, 25);
+    stop.position(25, 25);
     stop.mousePressed(stopsound);
     mySetup();
 }
@@ -111,7 +111,7 @@ function mouseClicked() {
     myHandleClick(world_pos[0], world_pos[1]);
 }
 
-function mousePressed() {
+function keyPressed() {
     mySound.play();
 }
 
