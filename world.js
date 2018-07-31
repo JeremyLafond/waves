@@ -1,8 +1,4 @@
 //Jeremy Lafond
-//pa2
-//PCG179
-//jalafond
-
 'use strict';
 let wave;
 let LitDock;
