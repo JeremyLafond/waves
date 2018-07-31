@@ -101,6 +101,10 @@ function mouseClicked() {
     myHandleClick(world_pos[0], world_pos[1]);
 }
 
+function mousePressed() {
+    mySound.play();
+}
+
 mySound.loop();
 mySound.stop();
 
