@@ -93,11 +93,11 @@ function setup() {
 
 function keyReleased()
 {
-  if (key=='s' && mySound.isPlaying)
+  if (key=='1')
   {
   	mySound.pause();
   }
-  if (key=='p')
+  if (key=='2')
   {
 	mySound.play();
   }
