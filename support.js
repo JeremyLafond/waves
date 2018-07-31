@@ -88,7 +88,7 @@ function setup() {
     tile_rows = Math.ceil( height / (tile_height_step * 2)) + 3; // The +3 is to keep drawing rows after the screen because tall tiles may protrude into the screen area
 
     mySetup();
-    mySound.loop();
+    mySound.play();
 }
 
 function keyReleased()
@@ -96,11 +96,10 @@ function keyReleased()
   if (key=='s' && mySound.isPlaying)
   {
   	mySound.pause();
-	console.log(hi);
   }
   if (key=='p')
   {
-	mySound.loop();
+	mySound.play();
   }
 }
 // mouseClicked is one of the callback handler functions in p5.js. We
