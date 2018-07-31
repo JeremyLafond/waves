@@ -96,6 +96,7 @@ function keyReleased()
   if (key=='s' && mySound.isPlaying)
   {
   	mySound.pause();
+	console.log(hi);
   }
   if (key=='p')
   {
