@@ -112,13 +112,13 @@ stop = createButton('Stop Sound');
 stop.position(75, 25);
 stop.mousePressed(stopsound);
 
-function playsound {
+function playsound() {
     if(mySound.isPlaying() == false) {
         mySound.play();
     }
 }
 
-function stopsound {
+function stopsound() {
     if(mySound.isPlaying() == true) {
         mySound.pause();
     }
