@@ -91,7 +91,17 @@ function setup() {
     mySound.loop();
 }
 
-
+function keyReleased()
+{
+  if (key=='s' && mySound.isPlaying)
+  {
+  	mySound.pause();
+  }
+  if (key=='p')
+  {
+	mySound.loop();
+  }
+}
 // mouseClicked is one of the callback handler functions in p5.js. We
 // redefine it here to do what we want it to do.
 function mouseClicked() {
