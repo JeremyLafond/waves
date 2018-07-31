@@ -22,8 +22,6 @@ let camera_offset;
 let camera_velocity;
 
 let mySound;
-let play;
-let stop;
 
 /////////////////////////////
 // Transforms between coordinate systems
@@ -92,14 +90,6 @@ function setup() {
     
     mySound.loop();
     mySound.stop();
-
-    play = createButton('Play Sound');
-    play.position(0,0);
-    play.mousePressed(playsound);
-
-    stop = createButton('Stop Sound');
-    stop.position(25, 25);
-    stop.mousePressed(stopsound);
     mySetup();
 }
 
@@ -111,19 +101,15 @@ function mouseClicked() {
     myHandleClick(world_pos[0], world_pos[1]);
 }
 
-function keyPressed() {
-    mySound.play();
-}
+function keyReleased() {
+    if(key=='1') {
+        if(mySound.isPlaying() == false) {
+            mySound.play();
+        }
 
-function playsound() {
-    if(mySound.isPlaying() == false) {
-        mySound.play();
-    }
-}
-
-function stopsound() {
-    if(mySound.isPlaying() == true) {
-        mySound.pause();
+        if(mySound.isPlaying() == true) {
+            mySound.pause();
+        }
     }
 }
 
